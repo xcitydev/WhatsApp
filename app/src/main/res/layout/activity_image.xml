@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBlack"
+    tools:context=".view.activities.display.ImageActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/go_back"
+                android:padding="15dp"
+                android:src="@drawable/ic_back"
+                android:backgroundTint="@color/colorBlack"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Profile Picture"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:id="@+id/edit_pfp"
+                android:padding="15dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_create"
+                android:backgroundTint="@color/colorBlack"/>
+            <ImageButton
+                android:id="@+id/share_pfp"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"
+                android:backgroundTint="@color/colorBlack"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <com.jsibbold.zoomage.ZoomageView
+        android:id="@+id/zoomable"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_male_placeholder"
+        android:transitionName="image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+</layout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_gravity="start"
+    android:padding="5dp"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_text_message"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_left_background"
+        android:text="This is a text from king to"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="10dp"/>
+
+</LinearLayout>

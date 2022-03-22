@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient2"
+    tools:context=".view.activities.chats.ChatsActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar12345"
+        android:background="@drawable/gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/go_back_chat"
+                android:src="@drawable/ic_back"
+                android:tint="@color/colorBlack"
+                android:backgroundTint="@android:color/transparent"/>
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/tv_chat_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_male_placeholder"/>
+            <LinearLayout
+                android:paddingStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_userName_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Username"/>
+                <TextView
+                    android:id="@+id/tv_chat_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last seen at 9:00am"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_above="@+id/chatSide"
+        android:id="@+id/recycleView_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar12345"/>
+    <LinearLayout
+        android:id="@+id/chatSide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="25dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:background="@android:color/transparent"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/btn_emoji"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_insert"
+                    android:layout_gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/send_message_box"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="serif-monospace"
+                    android:hint="Type a message"
+                    android:textColor="@android:color/white"
+                    android:padding="10dp"
+                    android:paddingStart="5dp"
+                    android:textColorHint="@color/colorBlack" />
+
+                <ImageView
+                    android:id="@+id/btn_file"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_attachment"
+                    android:layout_gravity="center_vertical"/>
+                <ImageView
+                    android:id="@+id/btn_camera_chat"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_camera"
+                    android:layout_gravity="center_vertical"
+                    app:tint="@android:color/white" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/voice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/colorBlack"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_mic"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

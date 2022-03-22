@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/image1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_male_placeholder" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="3dp">
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Username"/>
+            <ImageView
+                android:id="@+id/call"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_call"
+                app:tint="#5BD83F" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrowdownward"
+                app:tint="@android:color/holo_red_dark"
+                android:padding="3dp"/>
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#323232"
+                android:text="20/10/20, 9:32am"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

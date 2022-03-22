@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Search"
+        android:iconTint="@color/colorBlack"
+        app:showAsAction="always"/>
+    <group>
+        <item
+            android:id="@+id/action_new_group"
+            android:title="New Group"/>
+        <item
+            android:id="@+id/action_new_broadcast"
+            android:title="New BroadCast"/>
+        <item
+            android:id="@+id/action_x_web"
+            android:title="X-CHAT Web"/>
+        <item
+            android:id="@+id/action_starred_messages"
+            android:title="Starred Messages"/>
+        <item
+            android:id="@+id/action_settings"
+            android:title="Settings"/>
+    </group>
+
+</menu>

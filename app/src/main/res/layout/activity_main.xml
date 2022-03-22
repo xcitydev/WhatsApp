@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        app:elevation="0dp"
+        android:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="#000000"
+            app:title="X-CHAT"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tablayout"
+        android:layout_below="@id/app_bar"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabIndicator="@color/colorPrimary"
+        app:tabSelectedTextColor="#ffff"
+        app:tabIndicatorColor="#63A4F4"
+        app:tabIndicatorHeight="4dp"
+        app:tabBackground="@color/color1"
+        app:tabTextColor="#000000">
+    </com.google.android.material.tabs.TabLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:tint="#ffff"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="@color/color1"
+        android:src="@android:drawable/stat_notify_chat"
+        android:layout_margin="20dp"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager"
+        android:layout_below="@id/tablayout"
+        android:visibility="visible" />
+
+
+</RelativeLayout>
+</layout>

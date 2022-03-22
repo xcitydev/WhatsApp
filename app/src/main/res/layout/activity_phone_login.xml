@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activities.auth.PhoneLoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:id="@+id/toolbar1"
+        android:padding="15dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:text="Enter your phone number"
+            android:layout_marginLeft="15dp" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginVertical="50dp"
+        android:layout_below="@id/toolbar1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/toolbar2"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="X-chat will send an SMS message to verify your phone number. What's my Number?"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="+"/>
+            <EditText
+                android:id="@+id/ed_code_country"
+                android:layout_width="50dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:hint="234"/>
+            <EditText
+                android:id="@+id/ed_phone"
+                android:layout_width="250dp"
+                android:inputType="number"
+                android:maxLength="13"
+                android:layout_height="wrap_content"
+                android:hint="phone number"/>
+        </LinearLayout>
+        <TextView
+            android:padding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrier SMS charge may apply"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/ed_code"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/nxt_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"/>
+
+</RelativeLayout>
+</layout>
